@@ -1,2 +1,9 @@
 *.class
 *.log
+*.xml
+*.cache
+*/.DS_Store
+.DS_Store
+*/project/*
+*/target/*
+*/.idea/*
