@@ -1,4 +1,5 @@
 
+package  Day2
 // hello world in scala
 // 190109 marco
 // - def: def is a scala keyword to declare/define a method

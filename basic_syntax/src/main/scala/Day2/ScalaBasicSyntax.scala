@@ -4,6 +4,8 @@
   ref: https://www.tutorialspoint.com/scala/scala_basic_syntax.htm
 */
 
+package  Day2
+
 
 object ScalaBasicSyntax {
   def main(args: Array[String]): Unit = {
