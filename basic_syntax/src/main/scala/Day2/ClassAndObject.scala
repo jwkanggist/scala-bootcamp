@@ -1,9 +1,8 @@
 
-
-
 /*
   class
   Role: class declaration for object instantiation
+
 
   Format:
   class class_name {
@@ -19,8 +18,7 @@
   }
  */
 
-
-class Animal {
+class ClassAndObject {
 
   var animalName: String= "noset"
   var animalAge:  Int = -1
@@ -37,7 +35,7 @@ class Animal {
     return this.animalName
   }
 
-  def getAnimalAage(): Int={
+  def getAnimalAge(): Int={
     return this.animalAge
   }
 
@@ -48,11 +46,37 @@ class Animal {
 }
 
 /*
-    object
+    Expending class
+
+    - 부모클래스를 상속하여 자식 클라스를 생성
+    - extends 키워드 사용
+    - class 전달 인자에 override 키워드를 붙여줘야 한다.
+
+ */
+
+class ClassAndObjectExpetion extends ClassAndObject{
+
+  var animalWeightKg = 54
+
+  def setAnimalWeightKg (animalWeightKg: Int): Unit = {
+    this.animalWeightKg = animalWeightKg
+  }
+
+  def getAnimalWeightKg (): Int ={
+    this.animalWeightKg
+  }
+}
+
+/*
+    object:
+
 
     Role:
     - 1) an instance object of a certain class
     - 2) an singleton instance object: a single object of a class can exist
+    ==> 여기서는 2번으로 사용하고 있음
+    ==> 싱글톤 객체로 사용하기 위해서 object 키워드를 통해서 선언한다.
+    ==> 
 
     Format:
 
@@ -63,15 +87,18 @@ class Animal {
 
  */
 
+
 // A companion objects of the class Animal
-object Animal{
+object ClassAndObject{
   def main(args: Array[String]): Unit ={
-    val obj: Animal = new Animal
+    val obj: ClassAndObject = new ClassAndObject
+    val extendObj: ClassAndObjectExpetion = new ClassAndObjectExpetion
+
     var flag: Boolean = false
 
     obj.setAnimalName("dog")
     flag = obj.isAnimalNameSet
-    println("obj.AnimalNamte=",obj.getAnimalName())
+    println("obj.AnimalName=",obj.getAnimalName())
     println("flag:",flag)
 
     obj.setAnimalName("noset")
@@ -79,5 +106,17 @@ object Animal{
     println("obj.AnimalName=",obj.getAnimalName())
     println("flag:",flag)
 
+    extendObj.setAnimalName("dog")
+    extendObj.setAnimalAge(11)
+    extendObj.setAnimalWeightKg(24)
+    flag = extendObj.isAnimalNameSet
+    println("extendObj.AnimalName =", extendObj.getAnimalName())
+    println("extendObj.AnimalAge =", extendObj.getAnimalAge())
+    println("extendObj.AnimalWeightKg=", extendObj.getAnimalWeightKg())
+    println("flag:",flag)
+
   }
 }
+
+
+
