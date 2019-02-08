@@ -6,7 +6,8 @@ Scala Basic Syntax Tutorial
 ## List of Contents
 - Day1: About Scala: 
 - Day2: Hello world, Variables, Methods, Classes, and Object
-- Day3
+- Day3: Arrays, Collections,Functions, IFandElse, LoopStatement
+- Day4: 
 
 ## Reference
 - https://www.tutorialspoint.com/scala/scala_overview.htm
