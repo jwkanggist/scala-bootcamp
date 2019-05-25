@@ -14,7 +14,7 @@ please use `install_env.sh`
 - Align scala version (in build.sbt and build.properties) and sbt version (in build.sbt)
 - Align Java version at build.sbt
 - Intellij에서 sbt index을 조금 기다려야 한다. 
-- 
+- scala 버전과 java 버전을 꼭 확인하자!
 
 - At the meun > Run > Edit Configuration, enable `Enable capturing form snapshots`.
 - when you use spark, you should check whether the spark is provided.
